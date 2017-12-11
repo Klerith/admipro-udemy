@@ -108,19 +108,23 @@
                 <!-- Profile -->
                 <!-- ============================================================== -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img [src]="usuario.img | imagen" alt="user" class="profile-pic" />
+                    </a>
                     <div class="dropdown-menu dropdown-menu-right animated fadeIn">
                         <ul class="dropdown-user">
                             <li>
-                                <div class="dw-user-box">
-                                    <div class="u-img"><img src="assets/images/users/1.jpg" alt="user"></div>
+                                <div class="dw-user-box" align="center">
+                                    <div class="u-img"><img [src]="usuario.img | imagen" alt="user"></div>
                                     <div class="u-text">
-                                        <h4>Steave Jobs</h4>
-                                        <p class="text-muted">varun@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                        <h4> {{ usuario.nombre }} </h4>
+                                        <p class="text-muted"> {{ usuario.email }} </p>
+                                        <a routerLink="/perfil" class="btn btn-rounded btn-danger btn-sm">Ver perfil</a>
+                                    </div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                            <li><a routerLink="/perfil"><i class="ti-user"></i> Perfil</a></li>
                             <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
                             <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
                             <li role="separator" class="divider"></li>
