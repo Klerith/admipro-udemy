@@ -43,8 +43,9 @@
                 <!-- Search -->
                 <!-- ============================================================== -->
                 <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                    <form class="app-search">
-                        <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                    <div class="app-search">
+                        <input #input (keyup.enter)="buscar( input.value )" type="text" class="form-control" placeholder="Buscar y enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                    </div>
                 </li>
 
                 <!-- ============================================================== -->
